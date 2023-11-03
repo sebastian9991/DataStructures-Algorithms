@@ -1,40 +1,16 @@
-public class Solution {
+class Solution {
     public int removeElement(int[] nums, int val) {
-        int [] nums_new = new int[nums.length]; 
-        int k = 0; 
-
-        for(int i = 0; i < nums.length; i ++) {
-
-            if(nums[i] != val) {
-
-                nums_new[i] = nums[i];
-                k++;
-                
-            } else {
-
-                nums_new[i] = -1; 
-            }
-
-            }
-
-        //Reallocate the nums array to be nums_new 
-        //
-        int length = nums.length - 1;
-        for(int i = 0; i < nums.length; i ++) {
-            
-            if (nums_new[i] == -1) {
-                
-                nums[length - i] = nums_new[i];
-                
-            } else {  
-                nums[i] = nums_new[i];
+        int i = 0;
+        //Simply switch positions if the next jth element is not equal to val; there by "pushing" the val elements 
+        //to the end of the array
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != val) {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                i++;
             }
         }
-        
-
-
-       return k; 
+        return i;
     }
-
-
 }
