@@ -1,0 +1,4 @@
+#Generated files (Ignore these files from cargo target)
+/target/
+#Ignore the Cargo.lock files
+Cargo.loc
