@@ -1,5 +1,5 @@
 #Generated files (Ignore these files from cargo target)
-/target/
+problem*/target/
 #Ignore the Cargo.lock files
-Cargo.lock
-Cargo.toml
+problem*/Cargo.lock
+problem*/Cargo.toml
